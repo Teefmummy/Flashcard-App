@@ -11342,3 +11342,996 @@ Processing by QuestionsController#create as */*
 Completed 201 Created in 48ms (Views: 1.4ms | ActiveRecord: 42.0ms)
 
 
+Started POST "/api/user_token" for 127.0.0.1 at 2018-06-02 14:50:19 -0400
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 14:50:19 -0400
+  [1m[35m (18.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (19.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by QuizzesController#index as */*
+Processing by UserTokenController#create as JSON
+  Parameters: {"auth"=>{"email"=>"2@2.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"2@2.com", "password"=>"[FILTERED]"}}}
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 126ms (ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (12.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "2@2.com"], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 195ms (ActiveRecord: 60.9ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 14:50:49 -0400
+Processing by QuizzesController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 14:50:50 -0400
+Processing by QuizzesController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-06-02 14:50:56 -0400
+Processing by UserTokenController#create as JSON
+  Parameters: {"auth"=>{"email"=>"6@6.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"6@6.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "6@6.com"], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 14:50:56 -0400
+Processing by QuizzesController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Completed 201 Created in 273ms (Views: 0.4ms | ActiveRecord: 113.1ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 14:50:59 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.7ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 58ms (Views: 16.2ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 14:51:01 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.3ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 14:51:43 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.3ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 22ms (Views: 19.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/quizzes/" for 127.0.0.1 at 2018-06-02 14:51:50 -0400
+Processing by QuizzesController#create as */*
+  Parameters: {"quiz"=>{"name"=>"red", "description"=>"cred"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (15.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/quizzes_controller.rb:14
+  [1m[36mQuiz Create (68.5ms)[0m  [1m[32mINSERT INTO "quizzes" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "red"], ["description", "cred"], ["created_at", "2018-06-02 18:51:51.014998"], ["updated_at", "2018-06-02 18:51:51.014998"]]
+  ↳ app/controllers/quizzes_controller.rb:14
+  [1m[35m (25.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/quizzes_controller.rb:14
+Completed 201 Created in 116ms (Views: 0.5ms | ActiveRecord: 109.5ms)
+
+
+Started POST "/api/questions/" for 127.0.0.1 at 2018-06-02 14:51:54 -0400
+Processing by QuestionsController#create as */*
+  Parameters: {"question"=>{"q_value"=>"123", "a_value"=>"123", "quiz_id"=>60}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[36mQuiz Load (0.5ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[36mQuestion Create (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("q_value", "a_value", "created_at", "updated_at", "quiz_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["q_value", "123"], ["a_value", "123"], ["created_at", "2018-06-02 18:51:54.790903"], ["updated_at", "2018-06-02 18:51:54.790903"], ["quiz_id", 60]]
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[35m (19.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:4
+Completed 201 Created in 97ms (Views: 0.8ms | ActiveRecord: 26.8ms)
+
+
+Started POST "/api/questions/" for 127.0.0.1 at 2018-06-02 14:51:58 -0400
+Processing by QuestionsController#create as */*
+  Parameters: {"question"=>{"q_value"=>"31313", "a_value"=>"2123", "quiz_id"=>60}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[36mQuiz Load (0.3ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[36mQuestion Create (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("q_value", "a_value", "created_at", "updated_at", "quiz_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["q_value", "31313"], ["a_value", "2123"], ["created_at", "2018-06-02 18:51:58.380719"], ["updated_at", "2018-06-02 18:51:58.380719"], ["quiz_id", 60]]
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[35m (26.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:4
+Completed 201 Created in 31ms (Views: 0.3ms | ActiveRecord: 27.2ms)
+
+
+Started POST "/api/questions/" for 127.0.0.1 at 2018-06-02 14:52:01 -0400
+Processing by QuestionsController#create as */*
+  Parameters: {"question"=>{"q_value"=>"e1e1e", "a_value"=>"s", "quiz_id"=>60}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[36mQuiz Load (0.4ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[36mQuestion Create (0.5ms)[0m  [1m[32mINSERT INTO "questions" ("q_value", "a_value", "created_at", "updated_at", "quiz_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["q_value", "e1e1e"], ["a_value", "s"], ["created_at", "2018-06-02 18:52:01.563537"], ["updated_at", "2018-06-02 18:52:01.563537"], ["quiz_id", 60]]
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:4
+Completed 201 Created in 6ms (Views: 0.4ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/api/questions/" for 127.0.0.1 at 2018-06-02 14:52:05 -0400
+Processing by QuestionsController#create as */*
+  Parameters: {"question"=>{"q_value"=>"2", "a_value"=>"1", "quiz_id"=>60}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[36mQuiz Load (0.4ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[36mQuestion Create (0.6ms)[0m  [1m[32mINSERT INTO "questions" ("q_value", "a_value", "created_at", "updated_at", "quiz_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["q_value", "2"], ["a_value", "1"], ["created_at", "2018-06-02 18:52:05.041474"], ["updated_at", "2018-06-02 18:52:05.041474"], ["quiz_id", 60]]
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[35m (28.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:4
+Completed 201 Created in 35ms (Views: 0.8ms | ActiveRecord: 29.4ms)
+
+
+Started POST "/api/questions/" for 127.0.0.1 at 2018-06-02 14:52:09 -0400
+Processing by QuestionsController#create as */*
+  Parameters: {"question"=>{"q_value"=>"aca", "a_value"=>"caca", "quiz_id"=>60}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[36mQuiz Load (0.3ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[36mQuestion Create (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("q_value", "a_value", "created_at", "updated_at", "quiz_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["q_value", "aca"], ["a_value", "caca"], ["created_at", "2018-06-02 18:52:09.406751"], ["updated_at", "2018-06-02 18:52:09.406751"], ["quiz_id", 60]]
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[35m (41.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:4
+Completed 201 Created in 46ms (Views: 0.4ms | ActiveRecord: 42.0ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 14:52:46 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.4ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 15:03:10 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.9ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 44ms (Views: 33.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 15:04:03 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.6ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 51ms (Views: 46.7ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2018-06-02 16:05:09 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"poop", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (11.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUser Create (185.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2018-06-02 20:05:11.062390"], ["updated_at", "2018-06-02 20:05:11.062390"], ["email", "poop"], ["password_digest", "$2a$10$yYdjFaPQY2a7S1LiQGoGE.16L/S92N0RUmNXI5QCd7V0Db3atxXH2"]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[35m (18.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 201 Created in 483ms (Views: 17.8ms | ActiveRecord: 214.7ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-06-02 16:05:14 -0400
+Processing by UserTokenController#create as JSON
+  Parameters: {"auth"=>{"email"=>"poop", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"poop", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "poop"], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Completed 201 Created in 154ms (Views: 0.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 16:05:14 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.9ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 22ms (Views: 17.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 16:07:01 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.4ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 24ms (Views: 20.6ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-06-02 16:07:08 -0400
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 16:07:08 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.4ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.8ms)
+
+
+Processing by UserTokenController#create as JSON
+  Parameters: {"auth"=>{"email"=>"poop", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"poop", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "poop"], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Completed 201 Created in 85ms (Views: 0.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 16:08:05 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (1.0ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 21ms (Views: 16.5ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-06-02 16:09:53 -0400
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 16:09:53 -0400
+Processing by QuizzesController#index as */*
+Processing by UserTokenController#create as JSON
+  Parameters: {"auth"=>{"email"=>"poop", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"poop", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "poop"], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (86.1ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+Completed 201 Created in 93ms (Views: 0.7ms | ActiveRecord: 1.9ms)
+
+
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 112ms (Views: 18.0ms | ActiveRecord: 90.1ms)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2018-06-02 16:10:01 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"loop", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUser Create (42.8ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2018-06-02 20:10:01.917738"], ["updated_at", "2018-06-02 20:10:01.917738"], ["email", "loop"], ["password_digest", "$2a$10$wdnOKgzi4SMWWKxv3FqdRulcWUnJ6RtvxMIKgir8lvJKl4X3D265C"]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[35m (40.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 201 Created in 188ms (Views: 0.1ms | ActiveRecord: 83.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-06-02 16:10:05 -0400
+Processing by UserTokenController#create as JSON
+  Parameters: {"auth"=>{"email"=>"loop", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"loop", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "loop"], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Completed 201 Created in 86ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 16:10:05 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.4ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 16:10:13 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.4ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 22ms (Views: 18.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 16:10:28 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.5ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 19ms (Views: 15.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 16:10:36 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.3ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 16:11:00 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.4ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 19ms (Views: 16.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 16:11:20 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.4ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 16:11:28 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.5ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 16:42:10 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.7ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 32ms (Views: 21.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 16:43:10 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (1.1ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 23ms (Views: 18.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 16:43:17 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.5ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 19ms (Views: 15.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/quizzes/58" for 127.0.0.1 at 2018-06-02 16:43:44 -0400
+Processing by QuizzesController#show as */*
+  Parameters: {"id"=>"58"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.6ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:23
+Completed 200 OK in 8ms (Views: 0.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/quizzes/58" for 127.0.0.1 at 2018-06-02 16:43:56 -0400
+Processing by QuizzesController#show as */*
+  Parameters: {"id"=>"58"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (1.0ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:23
+Completed 200 OK in 6ms (Views: 1.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/quizzes/58" for 127.0.0.1 at 2018-06-02 16:44:59 -0400
+Processing by QuizzesController#show as */*
+  Parameters: {"id"=>"58"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.4ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:23
+Completed 200 OK in 20ms (Views: 0.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 16:45:29 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.5ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 20ms (Views: 16.8ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/api/quizzes/" for 127.0.0.1 at 2018-06-02 16:45:35 -0400
+Processing by QuizzesController#create as */*
+  Parameters: {"quiz"=>{"name"=>"poopd", "description"=>"pds"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/quizzes_controller.rb:14
+  [1m[36mQuiz Create (0.8ms)[0m  [1m[32mINSERT INTO "quizzes" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "poopd"], ["description", "pds"], ["created_at", "2018-06-02 20:45:35.207929"], ["updated_at", "2018-06-02 20:45:35.207929"]]
+  ↳ app/controllers/quizzes_controller.rb:14
+  [1m[35m (21.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/quizzes_controller.rb:14
+Completed 201 Created in 31ms (Views: 0.8ms | ActiveRecord: 23.2ms)
+
+
+Started POST "/api/questions/" for 127.0.0.1 at 2018-06-02 16:45:46 -0400
+Processing by QuestionsController#create as */*
+  Parameters: {"question"=>{"q_value"=>"how do you do?", "a_value"=>"yes!", "quiz_id"=>61}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[36mQuiz Load (0.5ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = $1 LIMIT $2[0m  [["id", 61], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[36mQuestion Create (1.2ms)[0m  [1m[32mINSERT INTO "questions" ("q_value", "a_value", "created_at", "updated_at", "quiz_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["q_value", "how do you do?"], ["a_value", "yes!"], ["created_at", "2018-06-02 20:45:46.438004"], ["updated_at", "2018-06-02 20:45:46.438004"], ["quiz_id", 61]]
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[35m (41.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:4
+Completed 201 Created in 81ms (Views: 1.0ms | ActiveRecord: 43.1ms)
+
+
+Started POST "/api/quizzes/" for 127.0.0.1 at 2018-06-02 16:47:48 -0400
+Processing by QuizzesController#create as */*
+  Parameters: {"quiz"=>{"name"=>"pasdf", "description"=>"apsdf"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/quizzes_controller.rb:14
+  [1m[36mQuiz Create (0.8ms)[0m  [1m[32mINSERT INTO "quizzes" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "pasdf"], ["description", "apsdf"], ["created_at", "2018-06-02 20:47:48.917945"], ["updated_at", "2018-06-02 20:47:48.917945"]]
+  ↳ app/controllers/quizzes_controller.rb:14
+  [1m[35m (40.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/quizzes_controller.rb:14
+Completed 201 Created in 54ms (Views: 0.9ms | ActiveRecord: 42.2ms)
+
+
+Started POST "/api/questions/" for 127.0.0.1 at 2018-06-02 16:47:51 -0400
+Processing by QuestionsController#create as */*
+  Parameters: {"question"=>{"q_value"=>"asdf", "a_value"=>"asdf", "quiz_id"=>62}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[36mQuiz Load (0.6ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = $1 LIMIT $2[0m  [["id", 62], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[36mQuestion Create (41.3ms)[0m  [1m[32mINSERT INTO "questions" ("q_value", "a_value", "created_at", "updated_at", "quiz_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["q_value", "asdf"], ["a_value", "asdf"], ["created_at", "2018-06-02 20:47:51.906931"], ["updated_at", "2018-06-02 20:47:51.906931"], ["quiz_id", 62]]
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:4
+Completed 201 Created in 49ms (Views: 0.5ms | ActiveRecord: 43.0ms)
+
+
+Started POST "/api/questions/" for 127.0.0.1 at 2018-06-02 16:47:55 -0400
+Processing by QuestionsController#create as */*
+  Parameters: {"question"=>{"q_value"=>"asdf", "a_value"=>"asdf", "quiz_id"=>62}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[36mQuiz Load (0.4ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = $1 LIMIT $2[0m  [["id", 62], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[36mQuestion Create (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("q_value", "a_value", "created_at", "updated_at", "quiz_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["q_value", "asdf"], ["a_value", "asdf"], ["created_at", "2018-06-02 20:47:55.767756"], ["updated_at", "2018-06-02 20:47:55.767756"], ["quiz_id", 62]]
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[35m (25.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:4
+Completed 201 Created in 31ms (Views: 0.8ms | ActiveRecord: 26.4ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 16:48:14 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.5ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/quizzes/1" for 127.0.0.1 at 2018-06-02 16:48:15 -0400
+Processing by QuizzesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:23
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 16:48:18 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.7ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 16:51:42 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (2.6ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 53ms (Views: 37.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 16:53:01 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.5ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 49ms (Views: 43.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 16:53:14 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (1.4ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 74ms (Views: 64.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 16:55:24 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.9ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 123ms (Views: 100.1ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/api/quizzes/" for 127.0.0.1 at 2018-06-02 17:02:03 -0400
+Processing by QuizzesController#create as */*
+  Parameters: {"quiz"=>{"name"=>"afaf", "description"=>"afaf"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/quizzes_controller.rb:14
+  [1m[36mQuiz Create (1.3ms)[0m  [1m[32mINSERT INTO "quizzes" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "afaf"], ["description", "afaf"], ["created_at", "2018-06-02 21:02:04.125761"], ["updated_at", "2018-06-02 21:02:04.125761"]]
+  ↳ app/controllers/quizzes_controller.rb:14
+  [1m[35m (9.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/quizzes_controller.rb:14
+Completed 201 Created in 34ms (Views: 1.9ms | ActiveRecord: 12.3ms)
+
+
+Started POST "/api/questions/" for 127.0.0.1 at 2018-06-02 17:02:06 -0400
+Processing by QuestionsController#create as */*
+  Parameters: {"question"=>{"q_value"=>"asdf", "a_value"=>"asdf", "quiz_id"=>63}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[36mQuiz Load (0.4ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = $1 LIMIT $2[0m  [["id", 63], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[36mQuestion Create (0.7ms)[0m  [1m[32mINSERT INTO "questions" ("q_value", "a_value", "created_at", "updated_at", "quiz_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["q_value", "asdf"], ["a_value", "asdf"], ["created_at", "2018-06-02 21:02:06.445489"], ["updated_at", "2018-06-02 21:02:06.445489"], ["quiz_id", 63]]
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:4
+Completed 201 Created in 11ms (Views: 0.6ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/api/quizzes/" for 127.0.0.1 at 2018-06-02 17:02:23 -0400
+Processing by QuizzesController#create as */*
+  Parameters: {"quiz"=>{"name"=>"asdf", "description"=>"vav"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/quizzes_controller.rb:14
+  [1m[36mQuiz Create (0.9ms)[0m  [1m[32mINSERT INTO "quizzes" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "asdf"], ["description", "vav"], ["created_at", "2018-06-02 21:02:23.580860"], ["updated_at", "2018-06-02 21:02:23.580860"]]
+  ↳ app/controllers/quizzes_controller.rb:14
+  [1m[35m (40.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/quizzes_controller.rb:14
+Completed 201 Created in 51ms (Views: 0.4ms | ActiveRecord: 41.6ms)
+
+
+Started POST "/api/questions/" for 127.0.0.1 at 2018-06-02 17:02:26 -0400
+Processing by QuestionsController#create as */*
+  Parameters: {"question"=>{"q_value"=>"ds", "a_value"=>"sf", "quiz_id"=>64}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[36mQuiz Load (0.5ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = $1 LIMIT $2[0m  [["id", 64], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[36mQuestion Create (0.6ms)[0m  [1m[32mINSERT INTO "questions" ("q_value", "a_value", "created_at", "updated_at", "quiz_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["q_value", "ds"], ["a_value", "sf"], ["created_at", "2018-06-02 21:02:26.498124"], ["updated_at", "2018-06-02 21:02:26.498124"], ["quiz_id", 64]]
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:4
+Completed 201 Created in 8ms (Views: 0.3ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/api/quizzes/" for 127.0.0.1 at 2018-06-02 17:02:36 -0400
+Processing by QuizzesController#create as */*
+  Parameters: {"quiz"=>{"name"=>"asdf", "description"=>"asdf"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/quizzes_controller.rb:14
+  [1m[36mQuiz Create (0.3ms)[0m  [1m[32mINSERT INTO "quizzes" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "asdf"], ["description", "asdf"], ["created_at", "2018-06-02 21:02:36.442782"], ["updated_at", "2018-06-02 21:02:36.442782"]]
+  ↳ app/controllers/quizzes_controller.rb:14
+  [1m[35m (18.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/quizzes_controller.rb:14
+Completed 201 Created in 24ms (Views: 0.6ms | ActiveRecord: 18.9ms)
+
+
+Started POST "/api/quizzes/" for 127.0.0.1 at 2018-06-02 17:04:27 -0400
+Processing by QuizzesController#create as */*
+  Parameters: {"quiz"=>{"name"=>"asdf", "description"=>"afaf"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/quizzes_controller.rb:14
+  [1m[36mQuiz Create (0.6ms)[0m  [1m[32mINSERT INTO "quizzes" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "asdf"], ["description", "afaf"], ["created_at", "2018-06-02 21:04:27.542481"], ["updated_at", "2018-06-02 21:04:27.542481"]]
+  ↳ app/controllers/quizzes_controller.rb:14
+  [1m[35m (40.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/quizzes_controller.rb:14
+Completed 201 Created in 48ms (Views: 0.5ms | ActiveRecord: 42.3ms)
+
+
+Started POST "/api/quizzes/" for 127.0.0.1 at 2018-06-02 17:04:39 -0400
+Processing by QuizzesController#create as */*
+  Parameters: {"quiz"=>{"name"=>"vavsd", "description"=>"asdf"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/quizzes_controller.rb:14
+  [1m[36mQuiz Create (1.1ms)[0m  [1m[32mINSERT INTO "quizzes" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "vavsd"], ["description", "asdf"], ["created_at", "2018-06-02 21:04:39.244505"], ["updated_at", "2018-06-02 21:04:39.244505"]]
+  ↳ app/controllers/quizzes_controller.rb:14
+  [1m[35m (40.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/quizzes_controller.rb:14
+Completed 201 Created in 66ms (Views: 0.8ms | ActiveRecord: 42.6ms)
+
+
+Started POST "/api/quizzes/" for 127.0.0.1 at 2018-06-02 17:04:52 -0400
+Processing by QuizzesController#create as */*
+  Parameters: {"quiz"=>{"name"=>"asdf", "description"=>"avaf"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/quizzes_controller.rb:14
+  [1m[36mQuiz Create (0.5ms)[0m  [1m[32mINSERT INTO "quizzes" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "asdf"], ["description", "avaf"], ["created_at", "2018-06-02 21:04:52.861478"], ["updated_at", "2018-06-02 21:04:52.861478"]]
+  ↳ app/controllers/quizzes_controller.rb:14
+  [1m[35m (40.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/quizzes_controller.rb:14
+Completed 201 Created in 47ms (Views: 0.6ms | ActiveRecord: 41.7ms)
+
+
+Started POST "/api/quizzes/" for 127.0.0.1 at 2018-06-02 17:05:22 -0400
+Processing by QuizzesController#create as */*
+  Parameters: {"quiz"=>{"name"=>"sdf", "description"=>"asdf"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/quizzes_controller.rb:14
+  [1m[36mQuiz Create (0.7ms)[0m  [1m[32mINSERT INTO "quizzes" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "sdf"], ["description", "asdf"], ["created_at", "2018-06-02 21:05:22.474866"], ["updated_at", "2018-06-02 21:05:22.474866"]]
+  ↳ app/controllers/quizzes_controller.rb:14
+  [1m[35m (37.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/quizzes_controller.rb:14
+Completed 201 Created in 49ms (Views: 0.9ms | ActiveRecord: 38.7ms)
+
+
+Started POST "/api/quizzes/" for 127.0.0.1 at 2018-06-02 17:05:34 -0400
+Processing by QuizzesController#create as */*
+  Parameters: {"quiz"=>{"name"=>"vavasd", "description"=>"asdf"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/quizzes_controller.rb:14
+  [1m[36mQuiz Create (0.4ms)[0m  [1m[32mINSERT INTO "quizzes" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "vavasd"], ["description", "asdf"], ["created_at", "2018-06-02 21:05:34.021044"], ["updated_at", "2018-06-02 21:05:34.021044"]]
+  ↳ app/controllers/quizzes_controller.rb:14
+  [1m[35m (9.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/quizzes_controller.rb:14
+Completed 201 Created in 30ms (Views: 2.5ms | ActiveRecord: 10.6ms)
+
+
+Started POST "/api/quizzes/" for 127.0.0.1 at 2018-06-02 17:06:51 -0400
+Processing by QuizzesController#create as */*
+  Parameters: {"quiz"=>{"name"=>"fasdf", "description"=>"asdf"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/quizzes_controller.rb:14
+  [1m[36mQuiz Create (0.8ms)[0m  [1m[32mINSERT INTO "quizzes" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "fasdf"], ["description", "asdf"], ["created_at", "2018-06-02 21:06:52.068850"], ["updated_at", "2018-06-02 21:06:52.068850"]]
+  ↳ app/controllers/quizzes_controller.rb:14
+  [1m[35m (40.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/quizzes_controller.rb:14
+Completed 201 Created in 50ms (Views: 0.7ms | ActiveRecord: 42.2ms)
+
+
+Started POST "/api/questions/" for 127.0.0.1 at 2018-06-02 17:06:54 -0400
+Processing by QuestionsController#create as */*
+  Parameters: {"question"=>{"q_value"=>"vavav", "a_value"=>"asdf", "quiz_id"=>71}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[36mQuiz Load (0.4ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[36mQuestion Create (0.5ms)[0m  [1m[32mINSERT INTO "questions" ("q_value", "a_value", "created_at", "updated_at", "quiz_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["q_value", "vavav"], ["a_value", "asdf"], ["created_at", "2018-06-02 21:06:54.662770"], ["updated_at", "2018-06-02 21:06:54.662770"], ["quiz_id", 71]]
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:4
+Completed 201 Created in 10ms (Views: 0.6ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/api/questions/" for 127.0.0.1 at 2018-06-02 17:06:57 -0400
+Processing by QuestionsController#create as */*
+  Parameters: {"question"=>{"q_value"=>"asdf", "a_value"=>"asdf", "quiz_id"=>71}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[36mQuiz Load (0.4ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[36mQuestion Create (0.6ms)[0m  [1m[32mINSERT INTO "questions" ("q_value", "a_value", "created_at", "updated_at", "quiz_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["q_value", "asdf"], ["a_value", "asdf"], ["created_at", "2018-06-02 21:06:57.162357"], ["updated_at", "2018-06-02 21:06:57.162357"], ["quiz_id", 71]]
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:4
+Completed 201 Created in 7ms (Views: 0.6ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/api/quizzes/" for 127.0.0.1 at 2018-06-02 17:07:44 -0400
+Processing by QuizzesController#create as */*
+  Parameters: {"quiz"=>{"name"=>"asdf", "description"=>"asdf"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/quizzes_controller.rb:14
+  [1m[36mQuiz Create (1.0ms)[0m  [1m[32mINSERT INTO "quizzes" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "asdf"], ["description", "asdf"], ["created_at", "2018-06-02 21:07:44.648291"], ["updated_at", "2018-06-02 21:07:44.648291"]]
+  ↳ app/controllers/quizzes_controller.rb:14
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/quizzes_controller.rb:14
+Completed 201 Created in 35ms (Views: 10.6ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/api/questions/" for 127.0.0.1 at 2018-06-02 17:07:47 -0400
+Processing by QuestionsController#create as */*
+  Parameters: {"question"=>{"q_value"=>"afaf", "a_value"=>"asdf", "quiz_id"=>72}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[36mQuiz Load (0.4ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[36mQuestion Create (0.5ms)[0m  [1m[32mINSERT INTO "questions" ("q_value", "a_value", "created_at", "updated_at", "quiz_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["q_value", "afaf"], ["a_value", "asdf"], ["created_at", "2018-06-02 21:07:47.013840"], ["updated_at", "2018-06-02 21:07:47.013840"], ["quiz_id", 72]]
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:4
+Completed 201 Created in 11ms (Views: 0.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 17:07:48 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.4ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 29ms (Views: 26.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 17:08:09 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.6ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 62ms (Views: 58.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 17:08:12 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.4ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 17:08:13 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.5ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 23ms (Views: 20.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 17:08:14 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.4ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 17:08:15 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.4ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 17:08:15 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.4ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 17:08:16 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.4ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 17:08:16 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.4ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 17:08:16 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.3ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 17:08:47 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.3ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/quizzes/1" for 127.0.0.1 at 2018-06-02 17:08:49 -0400
+Processing by QuizzesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.5ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:23
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 17:33:21 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (1.0ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 60ms (Views: 50.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/api/quizzes/1" for 127.0.0.1 at 2018-06-02 17:33:44 -0400
+Processing by QuizzesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.7ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:23
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 17:33:50 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.4ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 22ms (Views: 19.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/api/quizzes/" for 127.0.0.1 at 2018-06-02 17:33:59 -0400
+Processing by QuizzesController#create as */*
+  Parameters: {"quiz"=>{"name"=>"new quiz", "description"=>"sdfasdf cool quiz"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/quizzes_controller.rb:14
+  [1m[36mQuiz Create (38.6ms)[0m  [1m[32mINSERT INTO "quizzes" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "new quiz"], ["description", "sdfasdf cool quiz"], ["created_at", "2018-06-02 21:33:59.110018"], ["updated_at", "2018-06-02 21:33:59.110018"]]
+  ↳ app/controllers/quizzes_controller.rb:14
+  [1m[35m (15.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/quizzes_controller.rb:14
+Completed 201 Created in 63ms (Views: 0.8ms | ActiveRecord: 54.8ms)
+
+
+Started POST "/api/questions/" for 127.0.0.1 at 2018-06-02 17:34:03 -0400
+Processing by QuestionsController#create as */*
+  Parameters: {"question"=>{"q_value"=>"poop", "a_value"=>"poop", "quiz_id"=>73}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[36mQuiz Load (0.3ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[36mQuestion Create (0.6ms)[0m  [1m[32mINSERT INTO "questions" ("q_value", "a_value", "created_at", "updated_at", "quiz_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["q_value", "poop"], ["a_value", "poop"], ["created_at", "2018-06-02 21:34:03.463176"], ["updated_at", "2018-06-02 21:34:03.463176"], ["quiz_id", 73]]
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:4
+Completed 201 Created in 8ms (Views: 0.8ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/api/questions/" for 127.0.0.1 at 2018-06-02 17:34:07 -0400
+Processing by QuestionsController#create as */*
+  Parameters: {"question"=>{"q_value"=>"asdfa", "a_value"=>"asdfas", "quiz_id"=>73}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[36mQuiz Load (0.4ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[36mQuestion Create (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("q_value", "a_value", "created_at", "updated_at", "quiz_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["q_value", "asdfa"], ["a_value", "asdfas"], ["created_at", "2018-06-02 21:34:07.787415"], ["updated_at", "2018-06-02 21:34:07.787415"], ["quiz_id", 73]]
+  ↳ app/controllers/questions_controller.rb:4
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:4
+Completed 201 Created in 7ms (Views: 0.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 17:34:18 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.4ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/quizzes/73" for 127.0.0.1 at 2018-06-02 17:34:22 -0400
+Processing by QuizzesController#show as */*
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:23
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2018-06-02 18:41:06 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"pook", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2018-06-02 22:41:09.356798"], ["updated_at", "2018-06-02 22:41:09.356798"], ["email", "pook"], ["password_digest", "$2a$10$QKoWjytP3Uxk5bykmIee9e9xBA11IZWhxnsBEipIAG.EdXXaJTUCG"]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[35m (171.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 201 Created in 355ms (Views: 0.9ms | ActiveRecord: 173.8ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-06-02 18:41:14 -0400
+Processing by UserTokenController#create as JSON
+  Parameters: {"auth"=>{"email"=>"pook", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"pook", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "pook"], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Completed 201 Created in 140ms (Views: 1.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/quizzes" for 127.0.0.1 at 2018-06-02 18:41:14 -0400
+Processing by QuizzesController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (1.2ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:6
+Completed 200 OK in 46ms (Views: 39.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/quizzes/1" for 127.0.0.1 at 2018-06-02 18:41:16 -0400
+Processing by QuizzesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuiz Load (0.5ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:23
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 0.9ms)
+
+

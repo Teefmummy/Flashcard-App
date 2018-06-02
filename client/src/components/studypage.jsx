@@ -10,44 +10,29 @@ class StudyPage extends Component {
       quiz: [],
       cardsLoaded: false
     }
-    // this.getDeckRelatedInformation = this.getDeckRelatedInformation.bind(this);
+    this.getDeckRelatedInformation = this.getDeckRelatedInformation.bind(this);
   }
-  // getDeckRelatedInformation() {
-  //   const deckId = this.props.match.params.id;
-  //   const jwt = localStorage.getItem("jwt")
-  //   const init = {
-  //     headers: {"Authorization": `Bearer ${jwt}`}
-  //   }
-  //   fetch(`${BASE_URL}/api/quizzes/${deckId}`, init)
-  //   .then(res => res.json())
-  //   .then(data =>
-  //     this.setState({
-  //       quiz: data,
-  //       cardsLoaded: true
-  //     }))
-  //   .catch(err => err);
-  // }
-
-
-  // componentDidMount() {
-  //   this.getDeckRelatedInformation()
-  // }
-
-  renderCards() {
-    // if(this.state.cardsLoaded) {
-    //   console.log(this.state.quiz)
-    //   return (this.state.quiz.map((card) => {
-    //     return (
-    //       <Card
-    //       question={card.q_value}
-    //       answer={card.a_value}
-    //       key={card.id} />
-    //     )
-    //     }))
-    //   } else {
-    //   return (<h1>Loading</h1>)
-    // }
+  getDeckRelatedInformation() {
+    const deckId = this.props.match.params.id;
+    const jwt = localStorage.getItem("jwt")
+    const init = {
+      headers: {"Authorization": `Bearer ${jwt}`}
+    }
+    fetch(`${BASE_URL}/api/quizzes/${deckId}`, init)
+    .then(res => res.json())
+    .then(data =>
+      this.setState({
+        quiz: data,
+        cardsLoaded: true
+      }))
+    .catch(err => err);
   }
+
+
+  componentDidMount() {
+    this.getDeckRelatedInformation()
+  }
+
   render() {
     // main container for the main view on the page
     // container for login/signup components
@@ -56,8 +41,9 @@ class StudyPage extends Component {
         <div className='study-page-container'>
           <h1>study Page</h1>
           <h2>{ this.state.cardsLoaded && this.state.quiz.name }</h2>
+          <p>{this.state.quiz.description}</p>
           <ul>
-            {this.renderCards()}
+
           </ul>
         </div>
       </div>

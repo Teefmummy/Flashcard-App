@@ -1,28 +1,105 @@
+/*colors*/
+/*green
+22734D
+beige
+F2D57E
+light rose
+F2DBCE
+red
+BF2C2C
+darker rose
+D98F8F*/
+/**/
 .App {
+
+}
+body {
+  background-color: #F2DBCE;
+  font-family: 'Open Sans', sans-serif;
   text-align: center;
 }
+/*NAV RELATED STYLES*/
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.nav {
+  height: 10vh;
+  background-color: #D98F8F;
 }
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.nav-container {
+  text-align: center;
+  display: flex;
+  flex-direction: row-reverse
 }
-
-.App-title {
-  font-size: 1.5em;
+.nav-container-obj {
+  display: flex;
+  text-decoration: none;
+  height: 10vh;
+  margin-right: 3vw;
+  align-items: center;
 }
-
-.App-intro {
-  font-size: large;
+.nav-container-obj a {
+  font-size: 25px;
+  color: inherit;
+  text-decoration: none;
 }
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.nav-container-obj a:hover {
+  text-decoration: underline;
+}
+/*Landing Page Related Styles*/
+.landing-page {
+  display:inline-block;
+  width: 100vw;
+  height: 90vh;
+  background-image: url('https://images.unsplash.com/photo-1513240942117-c57b2977d398?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db3df39ae3df19da735f68441943f939&auto=format&fit=crop&w=1500&q=80');
+}
+.landing-page-container {
+  background-color: rgba(242,219,206,.6);
+  display: inline-block;
+  padding: 4vh 2vw 4vh 2vw;
+  border: solid #D98F8F;
+  border-radius: 21px;
+  margin-top: 15vh;
+}
+.landing-page-container .register{
+  border-radius: 11px;
+  margin-right: 5vw;
+  height: 5vh;
+  width: 10vw;
+}
+.landing-page-container .login {
+  border-radius: 11px;
+  margin-left: 5vw;
+  height: 5vh;
+  width: 10vw;
+}
+.landing-page-container a {
+  text-decoration: none;
+  font-size: 2vh;
+}
+.landing-page-container a:hover {
+  text-decoration: underline;
+}
+/*Login and Register Related Styles*/
+.login-page {
+  background-color: rgba(242, 219, 206, .6);
+  display: inline-block;
+  padding: 4vh 2vw 4vh 2vw;
+  border: solid #D98F8F;
+  border-radius: 21px;
+  margin-top: 15vh;
+}
+.register-page {
+   background-color: rgba(242,219,206,.6);
+  display: inline-block;
+  padding: 4vh 2vw 4vh 2vw;
+  border: solid #D98F8F;
+  border-radius: 21px;
+  margin-top: 15vh;
+}
+/*quiz related styles*/
+.quiz {
+  background-color: rgba(242, 219, 206, .6);
+  padding: 4vh 2vw 4vh 2vw;
+  border: solid #D98F8F;
+  margin: 2vh 15vw 2vh 15vw;
+  border-radius: 21px;
 }

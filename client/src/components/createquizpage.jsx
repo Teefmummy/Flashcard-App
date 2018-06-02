@@ -34,8 +34,8 @@ class QuizCreateForm extends Component {
       quizID: respBody.id
     }))
     this.setState({
-      name:'',
-      description:'',
+      // name:'',
+      // description:'',
       created: true
     })
   }
@@ -43,16 +43,23 @@ class QuizCreateForm extends Component {
     return (
       <div className="quiz-page">
         <div className='quiz-page-container'>
+          <button><Link to="/quiz">Back to Quizzes</Link></button>
           <h1>Let's create a Quiz!</h1>
-          { this.state.created ? <CreateCardForm quiz={this.state.quizID}/> :
-          <form onSubmit={this.handleSubmit}>
-          <label htmlFor="name"> Name of Quiz: </label>
-            <input type="text" name="name" value={this.state.name} onChange={this.handleChange}placeholder="Quiz Name" ></input>
-          <label htmlFor="description"> description: </label>
-            <input type="text" name="description" value={this.state.description} onChange={this.handleChange}placeholder="Description" ></input>
+          { this.state.created ?
+            <div className="quiz-details-container">
+              <h3>Name: {this.state.name}</h3>
+              <p>Description: {this.state.description}</p>
+              <CreateCardForm quiz={this.state.quizID}/>
+            </div>
+          :
+            <form onSubmit={this.handleSubmit}>
+            <label htmlFor="name"> Name of Quiz: </label>
+              <input type="text" name="name" value={this.state.name} onChange={this.handleChange}placeholder="Quiz Name" ></input>
+            <label htmlFor="description"> description: </label>
+              <input type="text" name="description" value={this.state.description} onChange={this.handleChange}placeholder="Description" ></input>
             <button value="submit">Create it!</button>
-        </form>
-}
+            </form>
+          }
         </div>
       </div>
     );

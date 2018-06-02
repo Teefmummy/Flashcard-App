@@ -13,8 +13,8 @@ class Question extends Component {
   render() {
     return (
       <div>
-        <li>{this.props.question.q_value}</li>
-        <li>{this.props.question.a_value}</li>
+        <p>Question: {this.props.question.q_value}</p>
+        <p>Answer: {this.props.question.a_value}</p>
       </div>
     );
   }

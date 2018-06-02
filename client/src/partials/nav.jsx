@@ -8,10 +8,8 @@ class Nav extends Component {
     return (
       <div className="nav">
         <div className="nav-container">
-          <div>
-            <div className="nav-container-obj"><Link to="/profile">A</Link></div>
-            <div className="nav-container-obj">B</div>
-          </div>
+          <div className="nav-container-obj"><Link to="/profile">Profile</Link></div>
+          <div className="nav-container-obj"><Link to="/quiz">Quizzes</Link></div>
         </div>
       </div>
     );
