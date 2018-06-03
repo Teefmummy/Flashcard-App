@@ -1,4 +1,9 @@
 class QuestionsController < ApplicationController
+  def index
+    @question = Question.all
+    render json:  @question
+  end
+
   def create
     @question = Question.new(question_params)
     if @question.save

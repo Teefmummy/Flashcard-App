@@ -10,19 +10,26 @@ class StudyPage extends Component {
       quiz: [],
       cardsLoaded: false
     }
-    this.getDeckRelatedInformation = this.getDeckRelatedInformation.bind(this);
+    this.getQuestions = this.getQuestions.bind(this);
   }
-  getDeckRelatedInformation() {
-    const deckId = this.props.match.params.id;
-    const jwt = localStorage.getItem("jwt")
-    const init = {
-      headers: {"Authorization": `Bearer ${jwt}`}
+  getQuestions() {
+    const quizId = this.props.match.params.id;
+    const jwt = localStorage.getItem("jwt");
+    const body = {
+      instance: {
+        quiz_id: quizId
+      }
     }
-    fetch(`${BASE_URL}/api/quizzes/${deckId}`, init)
+    const init = {
+      method: 'GET',
+      headers: {"Authorization": `Bearer ${jwt}`},
+      body: body
+    }
+    fetch(`${BASE_URL}/api/questions/`, init)
     .then(res => res.json())
     .then(data =>
       this.setState({
-        quiz: data,
+        instance: data,
         cardsLoaded: true
       }))
     .catch(err => err);
@@ -30,7 +37,7 @@ class StudyPage extends Component {
 
 
   componentDidMount() {
-    this.getDeckRelatedInformation()
+    this.getQuestions()
   }
 
   render() {

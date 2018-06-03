@@ -15,6 +15,7 @@ class Question extends Component {
       <div>
         <p>Question: {this.props.question.q_value}</p>
         <p>Answer: {this.props.question.a_value}</p>
+        <button>Edit Me!</button>
       </div>
     );
   }
