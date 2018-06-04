@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import '../App.css';
 import Flashcard from '../partials/flashcard';
 const BASE_URL = process.env.REACT_APP_BASE_URL;
@@ -8,10 +9,12 @@ class StudyPage extends Component {
     super(props);
     this.state = {
       questions: [],
-      cardsLoaded: false
+      cardsLoaded: false,
+      currentCard: 0
     }
     this.getQuestions = this.getQuestions.bind(this);
     this.renderCard = this.renderCard.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   getQuestions() {
@@ -38,11 +41,18 @@ class StudyPage extends Component {
   }
 
   renderCard() {
-    for (let i = 0; i < this.state.questions.length; i += 1) {
-      return(<Flashcard question={this.state.questions[i]} handleNext={this.handleClick}/>)
-    }
+    if (this.state.currentCard < this.state.questions.length) {
+      return(<Flashcard studied={false}question={this.state.questions[this.state.currentCard]} handleNext={this.handleClick}/>)
+    } else {
+      return(<button><Link to="/quiz">Back to Quizzes</Link></button>)
 
-}
+    }
+  }
+  handleClick() {
+    this.setState({
+      currentCard: this.state.currentCard += 1
+    })
+  }
 
 
 

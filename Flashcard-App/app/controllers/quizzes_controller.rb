@@ -2,7 +2,7 @@ class QuizzesController < ApplicationController
   before_action :authenticate_user
   before_action :set_quiz, only: [:show]
   def index
-    @quiz = Quiz.all
+    @quiz = Quiz.all.order(created_at: :desc)
     render json: @quiz
   end
   def show
