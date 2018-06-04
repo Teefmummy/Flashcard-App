@@ -6,6 +6,7 @@ class QuizzesController < ApplicationController
     render json: @quiz
   end
   def show
+    @quiz = @quiz.questions
     render json: @quiz
   end
 

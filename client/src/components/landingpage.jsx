@@ -8,7 +8,7 @@ class LandingPage extends Component {
       return (
         <div className="landing-page">
         <div className='landing-page-container'>
-          <h1>Benkyo!</h1>
+          <h1>Flashcard App</h1>
           <button name="register" className="register"><Link to="/register">Register</Link></button>
           <button name="login" className="login"><Link to="/login">Login</Link></button>
         </div>
