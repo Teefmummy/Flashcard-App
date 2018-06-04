@@ -19,6 +19,7 @@ class CreateCardForm extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.renderQuestions = this.renderQuestions.bind(this);
+    this.handleDeleteClick = this.handleDeleteClick.bind(this);
   }
   handleChange(e) {
     const {name, value} = e.target;
@@ -26,7 +27,6 @@ class CreateCardForm extends Component {
       [name]: value
     });
   }
-
   handleSubmit(e) {
     e.preventDefault();
     createQuestion(this.state, this.props.quiz)
@@ -39,6 +39,22 @@ class CreateCardForm extends Component {
       created: true
     })
   }
+  deleteCard(input) {
+    console.log('deleting');
+    const jwt = localStorage.getItem("jwt");
+    const init = {
+      method: 'DELETE',
+      headers: {"Authorization": `Bearer ${jwt}`}
+    }
+    console.log(init);
+    fetch(`${BASE_URL}/api/questions/${input}`, init)
+    .then(res => res.json())
+    .catch(err => err);
+  }
+
+  handleDeleteClick(obj) {
+    this.deleteCard(obj);
+  }
   renderQuestions() {
     if(this.state.created) {
       console.log(this.state.questions)
@@ -46,7 +62,8 @@ class CreateCardForm extends Component {
         return (
           <Question
           question={question}
-          key={question.id}/>
+          key={question.id}
+          doDelete={this.handleDeleteClick}/>
         )
         }))
       } else {

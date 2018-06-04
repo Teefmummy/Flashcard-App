@@ -20,8 +20,6 @@ class StudyPage extends Component {
   getQuestions() {
     const quizId = this.props.match.params.id;
     const jwt = localStorage.getItem("jwt");
-    // const body = {"question":{"quiz_id": quizId}};
-    // console.log(body);
     const init = {
       method: 'GET',
       headers: {"Authorization": `Bearer ${jwt}`}
@@ -42,7 +40,7 @@ class StudyPage extends Component {
 
   renderCard() {
     if (this.state.currentCard < this.state.questions.length) {
-      return(<Flashcard studied={false}question={this.state.questions[this.state.currentCard]} handleNext={this.handleClick}/>)
+      return(<Flashcard question={this.state.questions[this.state.currentCard]} handleNext={this.handleClick}/>)
     } else {
       return(<button><Link to="/quiz">Back to Quizzes</Link></button>)
 
